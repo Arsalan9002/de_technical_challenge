@@ -3536,3 +3536,1688 @@ FROM
 Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 2021-06-05 17:29:03.072999 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa12ecf0e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa12ece7f50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa12ef31b50>]}
 2021-06-05 17:29:03.073282 (MainThread): Flushing usage events
+2021-06-05 20:06:58.652966 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:06:59.755774 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['event_logs_stg'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:06:59.757249 (MainThread): Tracking: tracking
+2021-06-05 20:06:59.771148 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a6010c910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a6010c790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a6010c850>]}
+2021-06-05 20:06:59.786345 (MainThread): Partial parsing not enabled
+2021-06-05 20:06:59.788312 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:06:59.792979 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:06:59.802912 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:06:59.833243 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:06:59.837626 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:06:59.841927 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:06:59.855488 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:06:59.862863 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:06:59.883327 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:06:59.888361 (MainThread): Parsing macros/core.sql
+2021-06-05 20:06:59.893877 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:06:59.906452 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:06:59.909120 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:06:59.933477 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:06:59.979788 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:07:00.012480 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:07:00.015900 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:07:00.028905 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:07:00.049299 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:07:00.059896 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:07:00.071498 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:07:00.080370 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:07:00.082145 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:07:00.083932 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:07:00.086532 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:07:00.098989 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:07:00.101845 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:07:00.104781 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:07:00.164487 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:07:00.168921 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:07:00.171471 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:07:00.174313 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:07:00.185574 (MainThread): Partial parsing not enabled
+2021-06-05 20:07:00.220366 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:07:00.241619 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:07:00.248750 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:07:00.264342 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:07:00.336485 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '346a6143-1ebd-47ef-8521-244eef3141e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a602e2d50>]}
+2021-06-05 20:07:00.353103 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '346a6143-1ebd-47ef-8521-244eef3141e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a60432290>]}
+2021-06-05 20:07:00.353647 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:07:00.354824 (MainThread): 
+2021-06-05 20:07:00.355341 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:07:00.356364 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:07:00.356588 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:07:04.056673 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:07:04.057046 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:07:04.057371 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:07:06.135450 (MainThread): 01:07:06 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:07:06.135867 (MainThread): 01:07:06 | 
+2021-06-05 20:07:06.138204 (Thread-1): Began running node model.werkspot_technical_challenge.event_logs_stg
+2021-06-05 20:07:06.138618 (Thread-1): 01:07:06 | 1 of 1 START incremental model events_information.event_logs_stg..... [RUN]
+2021-06-05 20:07:06.139097 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:07:06.140464 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61072), raddr=('142.250.185.42', 443)>
+2021-06-05 20:07:06.140704 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61071), raddr=('172.217.169.234', 443)>
+2021-06-05 20:07:06.140959 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61073), raddr=('142.250.185.42', 443)>
+2021-06-05 20:07:06.141440 (Thread-1): Compiling model.werkspot_technical_challenge.event_logs_stg
+2021-06-05 20:07:06.147106 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.event_logs_stg"
+2021-06-05 20:07:06.148054 (Thread-1): finished collecting timing info
+2021-06-05 20:07:06.216104 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.event_logs_stg"
+2021-06-05 20:07:06.216923 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:07:06.217166 (Thread-1): On model.werkspot_technical_challenge.event_logs_stg: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.event_logs_stg"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`event_logs_stg`
+  partition by datetime_trunc(AuditCreatedDatetime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT
+  ParsedEventLogEntry[OFFSET(0)] AS EventID,
+  ParsedEventLogEntry[OFFSET(1)] AS EventType,
+  ParsedEventLogEntry[OFFSET(2)] AS ProfessionalID,
+  ParsedEventLogEntry[OFFSET(3)] AS CreatedAt,
+  ParsedEventLogEntry[OFFSET(4)] AS Metadata,
+  CURRENT_DATETIME() AS AuditCreatedDatetime -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+FROM
+(
+  SELECT 
+    
+    SPLIT( EventLogEntry, ';') AS ParsedEventLogEntry -- Parsing Raw Event Log Entry on ; delimiter
+  
+  FROM `poetic-genius-315513.events_information.raw_event_logs`
+
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`event_logs_stg` will give last run date which can then be used to pick CDC records daily
+    
+)
+  );
+  
+2021-06-05 20:07:10.508904 (Thread-1): finished collecting timing info
+2021-06-05 20:07:10.509509 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '346a6143-1ebd-47ef-8521-244eef3141e5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a60554290>]}
+2021-06-05 20:07:10.510029 (Thread-1): 01:07:10 | 1 of 1 OK created incremental model events_information.event_logs_stg [CREATE TABLE (19.0k rows, 1.6 MB processed) in 4.37s]
+2021-06-05 20:07:10.510258 (Thread-1): Finished running node model.werkspot_technical_challenge.event_logs_stg
+2021-06-05 20:07:10.583713 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:07:10.584562 (MainThread): 01:07:10 | 
+2021-06-05 20:07:10.584863 (MainThread): 01:07:10 | Finished running 1 incremental model in 10.23s.
+2021-06-05 20:07:10.585220 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:07:10.585371 (MainThread): Connection 'model.werkspot_technical_challenge.event_logs_stg' was properly closed.
+2021-06-05 20:07:10.609078 (MainThread): 
+2021-06-05 20:07:10.609338 (MainThread): Completed successfully
+2021-06-05 20:07:10.609547 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-06-05 20:07:10.609865 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a605220d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a6056b350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8a6056b110>]}
+2021-06-05 20:07:10.610143 (MainThread): Flushing usage events
+2021-06-05 20:11:29.450188 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:11:30.378152 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['dim_professional'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:11:30.379435 (MainThread): Tracking: tracking
+2021-06-05 20:11:30.394181 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33f7eea90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33f7ee990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33f7ee1d0>]}
+2021-06-05 20:11:30.409169 (MainThread): Partial parsing not enabled
+2021-06-05 20:11:30.410817 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:11:30.416996 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:11:30.426567 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:11:30.455062 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:11:30.459080 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:11:30.463913 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:11:30.478997 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:11:30.486267 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:11:30.508552 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:11:30.513179 (MainThread): Parsing macros/core.sql
+2021-06-05 20:11:30.519526 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:11:30.534106 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:11:30.536873 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:11:30.561408 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:11:30.606808 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:11:30.636161 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:11:30.640604 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:11:30.650324 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:11:30.669740 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:11:30.680163 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:11:30.688728 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:11:30.695605 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:11:30.697059 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:11:30.698536 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:11:30.700907 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:11:30.713147 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:11:30.716247 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:11:30.719024 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:11:30.778569 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:11:30.781627 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:11:30.784149 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:11:30.787605 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:11:30.799214 (MainThread): Partial parsing not enabled
+2021-06-05 20:11:30.832597 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:11:30.860959 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:11:30.875307 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:11:30.885156 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:11:30.964193 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0e424a98-bbf0-4df7-a20a-bb7004724a27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33fb9ced0>]}
+2021-06-05 20:11:30.980610 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0e424a98-bbf0-4df7-a20a-bb7004724a27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33fc39f90>]}
+2021-06-05 20:11:30.981109 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:11:30.982038 (MainThread): 
+2021-06-05 20:11:30.982527 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:11:30.983563 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:11:30.983868 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:11:33.467908 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:11:33.468280 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:11:33.468598 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:11:34.823687 (MainThread): 01:11:34 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:11:34.823976 (MainThread): 01:11:34 | 
+2021-06-05 20:11:34.826395 (Thread-1): Began running node model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:11:34.826806 (Thread-1): 01:11:34 | 1 of 1 START incremental model events_information.dim_professional... [RUN]
+2021-06-05 20:11:34.827277 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:11:34.828627 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61139), raddr=('142.250.185.42', 443)>
+2021-06-05 20:11:34.828883 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61138), raddr=('172.217.169.234', 443)>
+2021-06-05 20:11:34.829088 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61144), raddr=('142.250.185.42', 443)>
+2021-06-05 20:11:34.829538 (Thread-1): Compiling model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:11:34.835855 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_professional"
+2021-06-05 20:11:34.836976 (Thread-1): finished collecting timing info
+2021-06-05 20:11:34.909442 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.dim_professional"
+2021-06-05 20:11:34.910163 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:11:34.910395 (Thread-1): On model.werkspot_technical_challenge.dim_professional: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_professional"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`dim_professional`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT
+  
+  DISTINCT
+
+    ProfessionalID,
+    CURRENT_DATETIME() as AuditCreatedDateTime,  -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+
+FROM 
+
+  `poetic-genius-315513`.`events_information`.`event_logs_stg`
+      
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`dim_professional` will give last run date which can then be used to pick CDC records daily
+    
+  );
+  
+2021-06-05 20:11:38.698507 (Thread-1): finished collecting timing info
+2021-06-05 20:11:38.699103 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0e424a98-bbf0-4df7-a20a-bb7004724a27', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33fad5410>]}
+2021-06-05 20:11:38.699574 (Thread-1): 01:11:38 | 1 of 1 OK created incremental model events_information.dim_professional [CREATE TABLE (1.5k rows, 97.0 KB processed) in 3.87s]
+2021-06-05 20:11:38.699774 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:11:38.728816 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:11:38.729459 (MainThread): 01:11:38 | 
+2021-06-05 20:11:38.729716 (MainThread): 01:11:38 | Finished running 1 incremental model in 7.75s.
+2021-06-05 20:11:38.729970 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:11:38.730180 (MainThread): Connection 'model.werkspot_technical_challenge.dim_professional' was properly closed.
+2021-06-05 20:11:38.741843 (MainThread): 
+2021-06-05 20:11:38.742192 (MainThread): Completed successfully
+2021-06-05 20:11:38.742425 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-06-05 20:11:38.742787 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33fade250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33fd512d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd33fad5410>]}
+2021-06-05 20:11:38.743045 (MainThread): Flushing usage events
+2021-06-05 20:17:40.752411 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:17:41.677363 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.compile.CompileTask'>, debug=False, defer=None, exclude=None, full_refresh=False, log_cache_events=False, log_format='default', models=None, parse_only=False, partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='compile', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='compile', write_json=True)
+2021-06-05 20:17:41.679381 (MainThread): Tracking: tracking
+2021-06-05 20:17:41.692945 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefaff2e50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefaff2e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefaff2110>]}
+2021-06-05 20:17:41.706977 (MainThread): Partial parsing not enabled
+2021-06-05 20:17:41.708638 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:17:41.712891 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:17:41.722501 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:17:41.751348 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:17:41.755264 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:17:41.759293 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:17:41.775782 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:17:41.783180 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:17:41.804263 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:17:41.808427 (MainThread): Parsing macros/core.sql
+2021-06-05 20:17:41.814519 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:17:41.827606 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:17:41.830230 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:17:41.854450 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:17:41.899004 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:17:41.927780 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:17:41.930615 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:17:41.939204 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:17:41.958421 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:17:41.967777 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:17:41.976849 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:17:41.984475 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:17:41.985958 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:17:41.987436 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:17:41.989705 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:17:42.001916 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:17:42.005190 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:17:42.008441 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:17:42.069619 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:17:42.072911 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:17:42.075431 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:17:42.078079 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:17:42.088481 (MainThread): Partial parsing not enabled
+2021-06-05 20:17:42.121915 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:17:42.142996 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:17:42.150348 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:17:42.158127 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:17:42.223644 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8204412b-1488-4487-8d28-b4fcbbf6ad4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefb1cb110>]}
+2021-06-05 20:17:42.239614 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8204412b-1488-4487-8d28-b4fcbbf6ad4e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefb431b10>]}
+2021-06-05 20:17:42.240122 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:17:42.241535 (MainThread): 
+2021-06-05 20:17:42.241963 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:17:42.243069 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:17:42.243332 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:17:43.130745 (ThreadPoolExecutor-0_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:17:44.982306 (MainThread): 01:17:44 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:17:44.982635 (MainThread): 01:17:44 | 
+2021-06-05 20:17:44.985102 (Thread-1): Began running node model.werkspot_technical_challenge.event_logs_stg
+2021-06-05 20:17:44.985647 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:17:44.985873 (Thread-1): Compiling model.werkspot_technical_challenge.event_logs_stg
+2021-06-05 20:17:44.988326 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61244), raddr=('142.250.185.42', 443)>
+2021-06-05 20:17:44.988587 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61243), raddr=('172.217.18.138', 443)>
+2021-06-05 20:17:44.996395 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.event_logs_stg"
+2021-06-05 20:17:44.996986 (Thread-1): finished collecting timing info
+2021-06-05 20:17:44.997232 (Thread-1): finished collecting timing info
+2021-06-05 20:17:44.997608 (Thread-1): Finished running node model.werkspot_technical_challenge.event_logs_stg
+2021-06-05 20:17:44.997784 (Thread-1): Began running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:17:44.998246 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:17:44.998489 (Thread-1): Compiling model.werkspot_technical_challenge.dim_service
+2021-06-05 20:17:45.003052 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:17:45.004140 (Thread-1): finished collecting timing info
+2021-06-05 20:17:45.004365 (Thread-1): finished collecting timing info
+2021-06-05 20:17:45.004765 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:17:45.004947 (Thread-1): Began running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:17:45.005374 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:17:45.005524 (Thread-1): Compiling model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:17:45.010651 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:17:45.011179 (Thread-1): finished collecting timing info
+2021-06-05 20:17:45.011362 (Thread-1): finished collecting timing info
+2021-06-05 20:17:45.011695 (Thread-1): Finished running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:17:45.011856 (Thread-1): Began running node model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:17:45.012233 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:17:45.012383 (Thread-1): Compiling model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:17:45.018566 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_professional"
+2021-06-05 20:17:45.019250 (Thread-1): finished collecting timing info
+2021-06-05 20:17:45.019490 (Thread-1): finished collecting timing info
+2021-06-05 20:17:45.019919 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:17:45.086605 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:17:45.086898 (MainThread): Connection 'model.werkspot_technical_challenge.dim_professional' was properly closed.
+2021-06-05 20:17:45.098482 (MainThread): 01:17:45 | Done.
+2021-06-05 20:17:45.098908 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefb1dd390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefb4678d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdefb602650>]}
+2021-06-05 20:17:45.099280 (MainThread): Flushing usage events
+2021-06-05 20:18:39.722711 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:18:40.603197 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['dim_service', 'dim_professional'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:18:40.605241 (MainThread): Tracking: tracking
+2021-06-05 20:18:40.616090 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac47db190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac47db590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac47db490>]}
+2021-06-05 20:18:40.633199 (MainThread): Partial parsing not enabled
+2021-06-05 20:18:40.634569 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:18:40.638774 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:18:40.647630 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:18:40.676506 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:18:40.680470 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:18:40.684344 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:18:40.698501 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:18:40.704494 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:18:40.722677 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:18:40.726500 (MainThread): Parsing macros/core.sql
+2021-06-05 20:18:40.731634 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:18:40.743571 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:18:40.745987 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:18:40.770059 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:18:40.814550 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:18:40.843043 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:18:40.845516 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:18:40.853886 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:18:40.872910 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:18:40.882162 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:18:40.890953 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:18:40.897512 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:18:40.898855 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:18:40.900261 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:18:40.902413 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:18:40.914820 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:18:40.917505 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:18:40.919763 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:18:40.979126 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:18:40.981733 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:18:40.983777 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:18:40.986035 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:18:40.996077 (MainThread): Partial parsing not enabled
+2021-06-05 20:18:41.028704 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:18:41.048095 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:18:41.054822 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:18:41.061347 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:18:41.127387 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5dbe82ca-bb3b-4649-8ded-0baeeb8647a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac499e3d0>]}
+2021-06-05 20:18:41.143755 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5dbe82ca-bb3b-4649-8ded-0baeeb8647a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac4afc890>]}
+2021-06-05 20:18:41.144180 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:18:41.145172 (MainThread): 
+2021-06-05 20:18:41.145647 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:18:41.146791 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:18:41.147099 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:18:43.474288 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:18:43.474658 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:18:43.474938 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:18:44.696028 (MainThread): 01:18:44 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:18:44.696395 (MainThread): 01:18:44 | 
+2021-06-05 20:18:44.698610 (Thread-1): Began running node model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:18:44.699005 (Thread-1): 01:18:44 | 1 of 2 START incremental model events_information.dim_professional... [RUN]
+2021-06-05 20:18:44.699482 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:18:44.699683 (Thread-1): Compiling model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:18:44.700968 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61269), raddr=('142.250.185.42', 443)>
+2021-06-05 20:18:44.701224 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61268), raddr=('172.217.18.138', 443)>
+2021-06-05 20:18:44.701420 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61270), raddr=('142.250.185.42', 443)>
+2021-06-05 20:18:44.708069 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_professional"
+2021-06-05 20:18:44.708666 (Thread-1): finished collecting timing info
+2021-06-05 20:18:44.779015 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.dim_professional"
+2021-06-05 20:18:44.779641 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:18:44.779847 (Thread-1): On model.werkspot_technical_challenge.dim_professional: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_professional"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`dim_professional`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT
+  
+  DISTINCT
+
+    ProfessionalID,
+    CURRENT_DATETIME() as AuditCreatedDateTime,  -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+
+FROM 
+
+  `poetic-genius-315513`.`events_information`.`event_logs_stg`
+      
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`dim_professional` will give last run date which can then be used to pick CDC records daily
+    
+  );
+  
+2021-06-05 20:18:49.394705 (Thread-1): finished collecting timing info
+2021-06-05 20:18:49.395286 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5dbe82ca-bb3b-4649-8ded-0baeeb8647a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac49bc050>]}
+2021-06-05 20:18:49.395808 (Thread-1): 01:18:49 | 1 of 2 OK created incremental model events_information.dim_professional [CREATE TABLE (1.5k rows, 97.0 KB processed) in 4.70s]
+2021-06-05 20:18:49.395999 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_professional
+2021-06-05 20:18:49.396250 (Thread-1): Began running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:18:49.396654 (Thread-1): 01:18:49 | 2 of 2 START incremental model events_information.dim_service........ [RUN]
+2021-06-05 20:18:49.397031 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:18:49.397175 (Thread-1): Compiling model.werkspot_technical_challenge.dim_service
+2021-06-05 20:18:49.401911 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:18:49.402393 (Thread-1): finished collecting timing info
+2021-06-05 20:18:49.405870 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:18:49.406392 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:18:49.406579 (Thread-1): On model.werkspot_technical_challenge.dim_service: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_service"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`dim_service`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT
+
+  DISTINCT 
+
+    CAST(ParsedMetdata[OFFSET(0)] AS STRING) AS ServiceID,
+    ParsedMetdata[OFFSET(1)] AS ServiceNameDutch,
+    ParsedMetdata[OFFSET(2)] AS ServiceNameEnglish,
+    CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+
+FROM 
+(
+  SELECT 
+    
+    SPLIT(Metadata,'_') AS ParsedMetdata
+  
+  FROM 
+    `poetic-genius-315513.events_information.event_logs_stg`
+
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`dim_service` will give last run date which can then be used to pick CDC records daily
+    
+  
+    AND Metadata!=''
+)
+  );
+  
+2021-06-05 20:18:50.748504 (Thread-1): Retry attempt 1 of 1 after error: BadRequest('Syntax error: Expected ")" but got keyword AND at [34:5]')
+2021-06-05 20:18:51.387169 (Thread-1): finished collecting timing info
+2021-06-05 20:18:51.387888 (Thread-1): Database Error in model dim_service (models/Dimensions/dim_service.sql)
+  Syntax error: Expected ")" but got keyword AND at [34:5]
+  compiled SQL at target/run/werkspot_technical_challenge/models/Dimensions/dim_service.sql
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 149, in exception_handler
+    yield
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 327, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 520, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3207, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 812, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 130, in result
+    raise self._exception
+google.api_core.exceptions.BadRequest: 400 Syntax error: Expected ")" but got keyword AND at [34:5]
+
+(job ID: 741c732c-14cc-416f-8166-0ca4e08aaf0c)
+
+                                                                           -----Query Job SQL Follows-----                                                                           
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_service"} */
+   2:
+   3:
+   4:  create or replace table `poetic-genius-315513`.`events_information`.`dim_service`
+   5:  partition by datetime_trunc(AuditCreatedDateTime, day)
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    
+  10:
+  11:
+  12:SELECT
+  13:
+  14:  DISTINCT 
+  15:
+  16:    CAST(ParsedMetdata[OFFSET(0)] AS STRING) AS ServiceID,
+  17:    ParsedMetdata[OFFSET(1)] AS ServiceNameDutch,
+  18:    ParsedMetdata[OFFSET(2)] AS ServiceNameEnglish,
+  19:    CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+  20:
+  21:FROM 
+  22:(
+  23:  SELECT 
+  24:    
+  25:    SPLIT(Metadata,'_') AS ParsedMetdata
+  26:  
+  27:  FROM 
+  28:    `poetic-genius-315513.events_information.event_logs_stg`
+  29:
+  30:    -- this will only be applied on an incremental run & will filter data early
+  31:    -- `poetic-genius-315513`.`events_information`.`dim_service` will give last run date which can then be used to pick CDC records daily
+  32:    
+  33:  
+  34:    AND Metadata!=''
+  35:)
+  36:  );
+  37:  
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 156, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 230, in execute
+    fetch=fetch
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 338, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 329, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 153, in exception_handler
+    self.handle_error(e, message)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 141, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error in model dim_service (models/Dimensions/dim_service.sql)
+  Syntax error: Expected ")" but got keyword AND at [34:5]
+  compiled SQL at target/run/werkspot_technical_challenge/models/Dimensions/dim_service.sql
+2021-06-05 20:18:51.398087 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5dbe82ca-bb3b-4649-8ded-0baeeb8647a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac4a9f590>]}
+2021-06-05 20:18:51.398535 (Thread-1): 01:18:51 | 2 of 2 ERROR creating incremental model events_information.dim_service [ERROR in 2.00s]
+2021-06-05 20:18:51.398713 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:18:51.494893 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:18:51.495558 (MainThread): 01:18:51 | 
+2021-06-05 20:18:51.495818 (MainThread): 01:18:51 | Finished running 2 incremental models in 10.35s.
+2021-06-05 20:18:51.496068 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:18:51.496238 (MainThread): Connection 'model.werkspot_technical_challenge.dim_service' was properly closed.
+2021-06-05 20:18:51.507099 (MainThread): 
+2021-06-05 20:18:51.507364 (MainThread): Completed with 1 error and 0 warnings:
+2021-06-05 20:18:51.507643 (MainThread): 
+2021-06-05 20:18:51.507858 (MainThread): Database Error in model dim_service (models/Dimensions/dim_service.sql)
+2021-06-05 20:18:51.508074 (MainThread):   Syntax error: Expected ")" but got keyword AND at [34:5]
+2021-06-05 20:18:51.508258 (MainThread):   compiled SQL at target/run/werkspot_technical_challenge/models/Dimensions/dim_service.sql
+2021-06-05 20:18:51.508433 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=1 SKIP=0 TOTAL=2
+2021-06-05 20:18:51.508728 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac4cec510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac2e77bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7feac4a9f590>]}
+2021-06-05 20:18:51.508979 (MainThread): Flushing usage events
+2021-06-05 20:20:38.557268 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:20:39.560947 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['dim_service'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:20:39.562608 (MainThread): Tracking: tracking
+2021-06-05 20:20:39.573483 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e47df950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e47ee450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e47ee1d0>]}
+2021-06-05 20:20:39.587688 (MainThread): Partial parsing not enabled
+2021-06-05 20:20:39.589460 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:20:39.594673 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:20:39.603495 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:20:39.632986 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:20:39.637144 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:20:39.641415 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:20:39.654738 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:20:39.661452 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:20:39.679138 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:20:39.686098 (MainThread): Parsing macros/core.sql
+2021-06-05 20:20:39.691639 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:20:39.704060 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:20:39.706972 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:20:39.732333 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:20:39.778113 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:20:39.808419 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:20:39.812840 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:20:39.822726 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:20:39.841777 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:20:39.851320 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:20:39.860102 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:20:39.867734 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:20:39.869468 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:20:39.871104 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:20:39.873714 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:20:39.885789 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:20:39.888492 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:20:39.890806 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:20:39.949197 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:20:39.952205 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:20:39.954578 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:20:39.957998 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:20:39.969541 (MainThread): Partial parsing not enabled
+2021-06-05 20:20:40.005179 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:20:40.025156 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:20:40.032676 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:20:40.040779 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:20:40.111310 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '59a445c7-0b4c-49b4-9e96-e388288c589d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e49b96d0>]}
+2021-06-05 20:20:40.129689 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59a445c7-0b4c-49b4-9e96-e388288c589d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e4acc350>]}
+2021-06-05 20:20:40.130107 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:20:40.131084 (MainThread): 
+2021-06-05 20:20:40.131623 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:20:40.132700 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:20:40.133002 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:20:42.635433 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:20:42.635797 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:20:42.636127 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:20:43.851038 (MainThread): 01:20:43 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:20:43.851436 (MainThread): 01:20:43 | 
+2021-06-05 20:20:43.854293 (Thread-1): Began running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:20:43.854714 (Thread-1): 01:20:43 | 1 of 1 START incremental model events_information.dim_service........ [RUN]
+2021-06-05 20:20:43.855212 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:20:43.856622 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61318), raddr=('142.250.185.42', 443)>
+2021-06-05 20:20:43.856875 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61317), raddr=('172.217.18.138', 443)>
+2021-06-05 20:20:43.857077 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61319), raddr=('142.250.185.42', 443)>
+2021-06-05 20:20:43.857545 (Thread-1): Compiling model.werkspot_technical_challenge.dim_service
+2021-06-05 20:20:43.863616 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:20:43.864176 (Thread-1): finished collecting timing info
+2021-06-05 20:20:43.935847 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:20:43.936467 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:20:43.936675 (Thread-1): On model.werkspot_technical_challenge.dim_service: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_service"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`dim_service`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT
+
+  DISTINCT 
+
+    CAST(ParsedMetdata[OFFSET(0)] AS STRING) AS ServiceID,
+    ParsedMetdata[OFFSET(1)] AS ServiceNameDutch,
+    ParsedMetdata[OFFSET(2)] AS ServiceNameEnglish,
+    CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+
+FROM 
+(
+  SELECT 
+    
+    SPLIT(Metadata,'_') AS ParsedMetdata
+  
+  FROM 
+    `poetic-genius-315513.events_information.event_logs_stg`
+
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`dim_service` will give last run date which can then be used to pick CDC records daily
+    
+)
+  );
+  
+2021-06-05 20:20:46.121472 (Thread-1): Retry attempt 1 of 1 after error: BadRequest('GET https://bigquery.googleapis.com/bigquery/v2/projects/poetic-genius-315513/queries/0f0dd212-a2fd-4891-a978-924128fb79ff?maxResults=0&location=US: Array index 1 is out of bounds (overflow)')
+2021-06-05 20:20:47.349919 (Thread-1): finished collecting timing info
+2021-06-05 20:20:47.350644 (Thread-1): Database Error in model dim_service (models/Dimensions/dim_service.sql)
+  Array index 1 is out of bounds (overflow)
+  compiled SQL at target/run/werkspot_technical_challenge/models/Dimensions/dim_service.sql
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 149, in exception_handler
+    yield
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 327, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 520, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3207, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 812, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 125, in result
+    self._blocking_poll(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3103, in _blocking_poll
+    super(QueryJob, self)._blocking_poll(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 104, in _blocking_poll
+    retry_(self._done_or_raise)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 83, in _done_or_raise
+    if not self.done():
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3089, in done
+    timeout=transport_timeout,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 1362, in _get_query_results
+    retry, method="GET", path=path, query_params=extra_params, timeout=timeout
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 578, in _call_api
+    return call()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/_http.py", line 423, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 GET https://bigquery.googleapis.com/bigquery/v2/projects/poetic-genius-315513/queries/c337479b-66d5-444d-8d44-ed0dfbf8db81?maxResults=0&location=US: Array index 1 is out of bounds (overflow)
+
+(job ID: c337479b-66d5-444d-8d44-ed0dfbf8db81)
+
+                                                                           -----Query Job SQL Follows-----                                                                           
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_service"} */
+   2:
+   3:
+   4:  create or replace table `poetic-genius-315513`.`events_information`.`dim_service`
+   5:  partition by datetime_trunc(AuditCreatedDateTime, day)
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    
+  10:
+  11:
+  12:SELECT
+  13:
+  14:  DISTINCT 
+  15:
+  16:    CAST(ParsedMetdata[OFFSET(0)] AS STRING) AS ServiceID,
+  17:    ParsedMetdata[OFFSET(1)] AS ServiceNameDutch,
+  18:    ParsedMetdata[OFFSET(2)] AS ServiceNameEnglish,
+  19:    CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+  20:
+  21:FROM 
+  22:(
+  23:  SELECT 
+  24:    
+  25:    SPLIT(Metadata,'_') AS ParsedMetdata
+  26:  
+  27:  FROM 
+  28:    `poetic-genius-315513.events_information.event_logs_stg`
+  29:
+  30:    -- this will only be applied on an incremental run & will filter data early
+  31:    -- `poetic-genius-315513`.`events_information`.`dim_service` will give last run date which can then be used to pick CDC records daily
+  32:    
+  33:)
+  34:  );
+  35:  
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 156, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 230, in execute
+    fetch=fetch
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 338, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 329, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 153, in exception_handler
+    self.handle_error(e, message)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 141, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error in model dim_service (models/Dimensions/dim_service.sql)
+  Array index 1 is out of bounds (overflow)
+  compiled SQL at target/run/werkspot_technical_challenge/models/Dimensions/dim_service.sql
+2021-06-05 20:20:47.362740 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '59a445c7-0b4c-49b4-9e96-e388288c589d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e4f10fd0>]}
+2021-06-05 20:20:47.363242 (Thread-1): 01:20:47 | 1 of 1 ERROR creating incremental model events_information.dim_service [ERROR in 3.51s]
+2021-06-05 20:20:47.363417 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:20:47.447842 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:20:47.448497 (MainThread): 01:20:47 | 
+2021-06-05 20:20:47.448768 (MainThread): 01:20:47 | Finished running 1 incremental model in 7.32s.
+2021-06-05 20:20:47.449117 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:20:47.449357 (MainThread): Connection 'model.werkspot_technical_challenge.dim_service' was properly closed.
+2021-06-05 20:20:47.466573 (MainThread): 
+2021-06-05 20:20:47.466847 (MainThread): Completed with 1 error and 0 warnings:
+2021-06-05 20:20:47.467075 (MainThread): 
+2021-06-05 20:20:47.467281 (MainThread): Database Error in model dim_service (models/Dimensions/dim_service.sql)
+2021-06-05 20:20:47.467450 (MainThread):   Array index 1 is out of bounds (overflow)
+2021-06-05 20:20:47.467608 (MainThread):   compiled SQL at target/run/werkspot_technical_challenge/models/Dimensions/dim_service.sql
+2021-06-05 20:20:47.467772 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-06-05 20:20:47.468076 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e47ee750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e4417050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fd9e4b37c10>]}
+2021-06-05 20:20:47.468352 (MainThread): Flushing usage events
+2021-06-05 20:22:30.557969 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:22:31.308584 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['dim_service'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:22:31.309572 (MainThread): Tracking: tracking
+2021-06-05 20:22:31.319735 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b310ba50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b310be90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b310b0d0>]}
+2021-06-05 20:22:31.334299 (MainThread): Partial parsing not enabled
+2021-06-05 20:22:31.335681 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:22:31.339440 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:22:31.348160 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:22:31.376476 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:22:31.380109 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:22:31.383743 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:22:31.396641 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:22:31.402858 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:22:31.420658 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:22:31.424505 (MainThread): Parsing macros/core.sql
+2021-06-05 20:22:31.429551 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:22:31.443843 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:22:31.446360 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:22:31.470542 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:22:31.515336 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:22:31.543090 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:22:31.545782 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:22:31.554294 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:22:31.573034 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:22:31.582141 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:22:31.590761 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:22:31.597498 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:22:31.598749 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:22:31.600124 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:22:31.602282 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:22:31.614385 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:22:31.617026 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:22:31.619256 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:22:31.677024 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:22:31.679575 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:22:31.681614 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:22:31.683889 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:22:31.693858 (MainThread): Partial parsing not enabled
+2021-06-05 20:22:31.729494 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:22:31.748474 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:22:31.755072 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:22:31.761768 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:22:31.828005 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a05811a0-4d5e-4039-9864-9cdc4f0e541a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b32e15d0>]}
+2021-06-05 20:22:31.850703 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a05811a0-4d5e-4039-9864-9cdc4f0e541a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b33f6410>]}
+2021-06-05 20:22:31.851208 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:22:31.852943 (MainThread): 
+2021-06-05 20:22:31.854276 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:22:31.855377 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:22:31.855685 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:22:34.360230 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:22:34.360597 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:22:34.360881 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:22:35.590574 (MainThread): 01:22:35 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:22:35.590915 (MainThread): 01:22:35 | 
+2021-06-05 20:22:35.592933 (Thread-1): Began running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:22:35.593326 (Thread-1): 01:22:35 | 1 of 1 START incremental model events_information.dim_service........ [RUN]
+2021-06-05 20:22:35.593802 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:22:35.594968 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61339), raddr=('142.250.185.42', 443)>
+2021-06-05 20:22:35.595265 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61338), raddr=('172.217.18.138', 443)>
+2021-06-05 20:22:35.595497 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61340), raddr=('142.250.185.42', 443)>
+2021-06-05 20:22:35.595946 (Thread-1): Compiling model.werkspot_technical_challenge.dim_service
+2021-06-05 20:22:35.601728 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:22:35.602766 (Thread-1): finished collecting timing info
+2021-06-05 20:22:35.673570 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.dim_service"
+2021-06-05 20:22:35.674195 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:22:35.674398 (Thread-1): On model.werkspot_technical_challenge.dim_service: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.dim_service"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`dim_service`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+SELECT
+
+  DISTINCT 
+
+    CAST(ParsedMetdata[OFFSET(0)] AS STRING) AS ServiceID,
+    ParsedMetdata[OFFSET(1)] AS ServiceNameDutch,
+    ParsedMetdata[OFFSET(2)] AS ServiceNameEnglish,
+    CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit Column, Used for Partitioning & Filtering Day in daily runs
+
+FROM 
+(
+  SELECT 
+    
+    SPLIT(Metadata,'_') AS ParsedMetdata
+  
+  FROM 
+    `poetic-genius-315513.events_information.event_logs_stg`
+     WHERE  Metadata!=''
+)
+
+  -- this will only be applied on an incremental run & will filter data early
+  -- `poetic-genius-315513`.`events_information`.`dim_service` will give last run date which can then be used to pick CDC records daily
+  
+  );
+  
+2021-06-05 20:22:39.481010 (Thread-1): finished collecting timing info
+2021-06-05 20:22:39.481565 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a05811a0-4d5e-4039-9864-9cdc4f0e541a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b32cc6d0>]}
+2021-06-05 20:22:39.481968 (Thread-1): 01:22:39 | 1 of 1 OK created incremental model events_information.dim_service... [CREATE TABLE (171.0 rows, 867.6 KB processed) in 3.89s]
+2021-06-05 20:22:39.482121 (Thread-1): Finished running node model.werkspot_technical_challenge.dim_service
+2021-06-05 20:22:39.516823 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:22:39.517984 (MainThread): 01:22:39 | 
+2021-06-05 20:22:39.518339 (MainThread): 01:22:39 | Finished running 1 incremental model in 7.66s.
+2021-06-05 20:22:39.518630 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:22:39.518832 (MainThread): Connection 'model.werkspot_technical_challenge.dim_service' was properly closed.
+2021-06-05 20:22:39.532369 (MainThread): 
+2021-06-05 20:22:39.532629 (MainThread): Completed successfully
+2021-06-05 20:22:39.532878 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-06-05 20:22:39.533255 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b32d4890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b37267d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f87b3726290>]}
+2021-06-05 20:22:39.533558 (MainThread): Flushing usage events
+2021-06-05 20:32:21.598173 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:32:22.565157 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['fct_fee'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:32:22.567135 (MainThread): Tracking: tracking
+2021-06-05 20:32:22.578398 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a007ede90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a007eda90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a007edad0>]}
+2021-06-05 20:32:22.592837 (MainThread): Partial parsing not enabled
+2021-06-05 20:32:22.594868 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:32:22.599222 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:32:22.608324 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:32:22.639145 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:32:22.643356 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:32:22.647940 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:32:22.661642 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:32:22.669158 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:32:22.688855 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:32:22.693782 (MainThread): Parsing macros/core.sql
+2021-06-05 20:32:22.699552 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:32:22.712256 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:32:22.715189 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:32:22.739597 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:32:22.787081 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:32:22.816171 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:32:22.818869 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:32:22.827455 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:32:22.846168 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:32:22.855778 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:32:22.864464 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:32:22.871256 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:32:22.873028 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:32:22.874818 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:32:22.877574 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:32:22.890210 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:32:22.894683 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:32:22.897663 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:32:22.957751 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:32:22.960716 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:32:22.962985 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:32:22.965525 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:32:22.975837 (MainThread): Partial parsing not enabled
+2021-06-05 20:32:23.010034 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:32:23.030079 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:32:23.045484 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:32:23.054133 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:32:23.121557 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c4d80da5-ba87-42e9-af7e-4f876842e1fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a00ae7f50>]}
+2021-06-05 20:32:23.140556 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c4d80da5-ba87-42e9-af7e-4f876842e1fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a00bf7ad0>]}
+2021-06-05 20:32:23.140963 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:32:23.141929 (MainThread): 
+2021-06-05 20:32:23.142438 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:32:23.143377 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:32:23.143686 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:32:25.749114 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:32:25.749504 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:32:25.749896 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:32:26.956289 (MainThread): 01:32:26 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:32:26.956661 (MainThread): 01:32:26 | 
+2021-06-05 20:32:26.959306 (Thread-1): Began running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:32:26.959752 (Thread-1): 01:32:26 | 1 of 1 START incremental model events_information.fct_fee............ [RUN]
+2021-06-05 20:32:26.960407 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:32:26.961622 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61474), raddr=('142.250.185.42', 443)>
+2021-06-05 20:32:26.961923 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61471), raddr=('172.217.169.234', 443)>
+2021-06-05 20:32:26.962205 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61477), raddr=('142.250.185.42', 443)>
+2021-06-05 20:32:26.962700 (Thread-1): Compiling model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:32:26.968610 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:32:26.969194 (Thread-1): finished collecting timing info
+2021-06-05 20:32:27.040021 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:32:27.041442 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:32:27.041777 (Thread-1): On model.werkspot_technical_challenge.fct_fee: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.fct_fee"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`fct_fee`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+
+SELECT
+  ProfessionalID,
+  
+  (CASE 
+    WHEN ParsedMetadata[OFFSET(0)]='' 
+      THEN 'Not provided' 
+      ELSE  ParsedMetadata[OFFSET(0)]
+    END
+  ) AS ServiceID,
+  
+  EventID,
+  EventType,
+  CreatedAt,
+  
+  (CASE 
+    WHEN ParsedMetadata[OFFSET(0)]!='' 
+      THEN CAST(ParsedMetadata[OFFSET(3)] AS FLOAT64) 
+      ELSE 0.0 
+   END
+  ) as LeadFee,
+ 
+FROM
+(
+  SELECT
+      EventID,
+      EventType,
+      ProfessionalID,
+      CreatedAt,
+      SPLIT(Metadata,'_') as ParsedMetadata,
+      CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit column
+    FROM 
+     `poetic-genius-315513.events_information.event_logs_stg`
+     where Metadata!=''
+)
+
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+    
+  );
+  
+2021-06-05 20:32:29.208688 (Thread-1): Retry attempt 1 of 1 after error: BadRequest('GET https://bigquery.googleapis.com/bigquery/v2/projects/poetic-genius-315513/queries/480c5f19-c9e0-4e49-bd09-5b02b2c45681?maxResults=0&location=US: Unrecognized name: AuditCreatedDateTime at [5:31]')
+2021-06-05 20:32:30.863759 (Thread-1): finished collecting timing info
+2021-06-05 20:32:30.864529 (Thread-1): Database Error in model fct_fee (models/Facts/fct_fee.sql)
+  Unrecognized name: AuditCreatedDateTime at [5:31]
+  compiled SQL at target/run/werkspot_technical_challenge/models/Facts/fct_fee.sql
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 149, in exception_handler
+    yield
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 327, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 520, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3207, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 812, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 125, in result
+    self._blocking_poll(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3103, in _blocking_poll
+    super(QueryJob, self)._blocking_poll(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 104, in _blocking_poll
+    retry_(self._done_or_raise)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 83, in _done_or_raise
+    if not self.done():
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3089, in done
+    timeout=transport_timeout,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 1362, in _get_query_results
+    retry, method="GET", path=path, query_params=extra_params, timeout=timeout
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 578, in _call_api
+    return call()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/_http.py", line 423, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 GET https://bigquery.googleapis.com/bigquery/v2/projects/poetic-genius-315513/queries/cd8104b5-0daf-423b-9b67-37b58b82f6f4?maxResults=0&location=US: Unrecognized name: AuditCreatedDateTime at [5:31]
+
+(job ID: cd8104b5-0daf-423b-9b67-37b58b82f6f4)
+
+                                                                         -----Query Job SQL Follows-----                                                                         
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.fct_fee"} */
+   2:
+   3:
+   4:  create or replace table `poetic-genius-315513`.`events_information`.`fct_fee`
+   5:  partition by datetime_trunc(AuditCreatedDateTime, day)
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    
+  10:
+  11:
+  12:
+  13:SELECT
+  14:  ProfessionalID,
+  15:  
+  16:  (CASE 
+  17:    WHEN ParsedMetadata[OFFSET(0)]='' 
+  18:      THEN 'Not provided' 
+  19:      ELSE  ParsedMetadata[OFFSET(0)]
+  20:    END
+  21:  ) AS ServiceID,
+  22:  
+  23:  EventID,
+  24:  EventType,
+  25:  CreatedAt,
+  26:  
+  27:  (CASE 
+  28:    WHEN ParsedMetadata[OFFSET(0)]!='' 
+  29:      THEN CAST(ParsedMetadata[OFFSET(3)] AS FLOAT64) 
+  30:      ELSE 0.0 
+  31:   END
+  32:  ) as LeadFee,
+  33: 
+  34:FROM
+  35:(
+  36:  SELECT
+  37:      EventID,
+  38:      EventType,
+  39:      ProfessionalID,
+  40:      CreatedAt,
+  41:      SPLIT(Metadata,'_') as ParsedMetadata,
+  42:      CURRENT_DATETIME() as AuditCreatedDateTime, -- Audit column
+  43:    FROM 
+  44:     `poetic-genius-315513.events_information.event_logs_stg`
+  45:     where Metadata!=''
+  46:)
+  47:
+  48:    -- this will only be applied on an incremental run & will filter data early
+  49:    -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+  50:    
+  51:  );
+  52:  
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 156, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 230, in execute
+    fetch=fetch
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 338, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 329, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 153, in exception_handler
+    self.handle_error(e, message)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 141, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error in model fct_fee (models/Facts/fct_fee.sql)
+  Unrecognized name: AuditCreatedDateTime at [5:31]
+  compiled SQL at target/run/werkspot_technical_challenge/models/Facts/fct_fee.sql
+2021-06-05 20:32:30.877515 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c4d80da5-ba87-42e9-af7e-4f876842e1fb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a00f0add0>]}
+2021-06-05 20:32:30.878008 (Thread-1): 01:32:30 | 1 of 1 ERROR creating incremental model events_information.fct_fee... [ERROR in 3.92s]
+2021-06-05 20:32:30.878192 (Thread-1): Finished running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:32:30.980436 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:32:30.981063 (MainThread): 01:32:30 | 
+2021-06-05 20:32:30.981320 (MainThread): 01:32:30 | Finished running 1 incremental model in 7.84s.
+2021-06-05 20:32:30.981661 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:32:30.981885 (MainThread): Connection 'model.werkspot_technical_challenge.fct_fee' was properly closed.
+2021-06-05 20:32:30.992950 (MainThread): 
+2021-06-05 20:32:30.993214 (MainThread): Completed with 1 error and 0 warnings:
+2021-06-05 20:32:30.993503 (MainThread): 
+2021-06-05 20:32:30.993716 (MainThread): Database Error in model fct_fee (models/Facts/fct_fee.sql)
+2021-06-05 20:32:30.993929 (MainThread):   Unrecognized name: AuditCreatedDateTime at [5:31]
+2021-06-05 20:32:30.994115 (MainThread):   compiled SQL at target/run/werkspot_technical_challenge/models/Facts/fct_fee.sql
+2021-06-05 20:32:30.994293 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-06-05 20:32:30.994607 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a00abcd50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f99ff734b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9a00acd850>]}
+2021-06-05 20:32:30.994865 (MainThread): Flushing usage events
+2021-06-05 20:33:14.079654 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:33:14.828160 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['fct_fee'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:33:14.830661 (MainThread): Tracking: tracking
+2021-06-05 20:33:14.840706 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991d80b890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991d80bbd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991d80b0d0>]}
+2021-06-05 20:33:14.859757 (MainThread): Partial parsing not enabled
+2021-06-05 20:33:14.861228 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:33:14.865752 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:33:14.876177 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:33:14.904152 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:33:14.907881 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:33:14.911638 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:33:14.925158 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:33:14.931140 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:33:14.947906 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:33:14.951637 (MainThread): Parsing macros/core.sql
+2021-06-05 20:33:14.956978 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:33:14.969174 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:33:14.971591 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:33:14.995728 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:33:15.041222 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:33:15.069637 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:33:15.072169 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:33:15.080785 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:33:15.100191 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:33:15.109414 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:33:15.117941 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:33:15.125012 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:33:15.126409 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:33:15.127967 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:33:15.130363 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:33:15.142247 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:33:15.145073 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:33:15.147592 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:33:15.206879 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:33:15.209475 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:33:15.211534 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:33:15.213834 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:33:15.224340 (MainThread): Partial parsing not enabled
+2021-06-05 20:33:15.256813 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:33:15.276420 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:33:15.284412 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:33:15.292606 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:33:15.358443 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4de89aa8-dca8-4313-913f-7241d47f5286', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991d9c35d0>]}
+2021-06-05 20:33:15.376974 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4de89aa8-dca8-4313-913f-7241d47f5286', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991dc25490>]}
+2021-06-05 20:33:15.377495 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:33:15.379009 (MainThread): 
+2021-06-05 20:33:15.379620 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:33:15.380699 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:33:15.381010 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:33:17.617853 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:33:17.618229 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:33:17.618553 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:33:18.773296 (MainThread): 01:33:18 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:33:18.773693 (MainThread): 01:33:18 | 
+2021-06-05 20:33:18.775797 (Thread-1): Began running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:33:18.776204 (Thread-1): 01:33:18 | 1 of 1 START incremental model events_information.fct_fee............ [RUN]
+2021-06-05 20:33:18.776672 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:33:18.778057 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61491), raddr=('142.250.185.42', 443)>
+2021-06-05 20:33:18.778312 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61490), raddr=('172.217.169.234', 443)>
+2021-06-05 20:33:18.778584 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61492), raddr=('142.250.185.42', 443)>
+2021-06-05 20:33:18.779117 (Thread-1): Compiling model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:33:18.785119 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:33:18.785691 (Thread-1): finished collecting timing info
+2021-06-05 20:33:18.860155 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:33:18.860882 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:33:18.861144 (Thread-1): On model.werkspot_technical_challenge.fct_fee: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.fct_fee"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`fct_fee`
+  partition by datetime_trunc(AuditCreatedDatetime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+
+SELECT
+  ProfessionalID,
+  
+  (CASE 
+    WHEN ParsedMetadata[OFFSET(0)]='' 
+      THEN 'Not provided' 
+      ELSE  ParsedMetadata[OFFSET(0)]
+    END
+  ) AS ServiceID,
+  
+  EventID,
+  EventType,
+  CreatedAt,
+  
+  (CASE 
+    WHEN ParsedMetadata[OFFSET(0)]!='' 
+      THEN CAST(ParsedMetadata[OFFSET(3)] AS FLOAT64) 
+      ELSE 0.0 
+   END
+  ) as LeadFee,
+ 
+FROM
+(
+  SELECT
+      EventID,
+      EventType,
+      ProfessionalID,
+      CreatedAt,
+      SPLIT(Metadata,'_') as ParsedMetadata,
+      CURRENT_DATETIME() as AuditCreatedDatetime, -- Audit column
+    FROM 
+     `poetic-genius-315513.events_information.event_logs_stg`
+     where Metadata!=''
+)
+
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+    
+  );
+  
+2021-06-05 20:33:20.717102 (Thread-1): Retry attempt 1 of 1 after error: BadRequest('GET https://bigquery.googleapis.com/bigquery/v2/projects/poetic-genius-315513/queries/362ed7c1-aff8-4f20-8489-3d60cb734006?maxResults=0&location=US: Unrecognized name: AuditCreatedDatetime at [5:31]')
+2021-06-05 20:33:22.458777 (Thread-1): finished collecting timing info
+2021-06-05 20:33:22.459473 (Thread-1): Database Error in model fct_fee (models/Facts/fct_fee.sql)
+  Unrecognized name: AuditCreatedDatetime at [5:31]
+  compiled SQL at target/run/werkspot_technical_challenge/models/Facts/fct_fee.sql
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 149, in exception_handler
+    yield
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 327, in fn
+    return self._query_and_results(client, sql, conn, job_params)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 520, in _query_and_results
+    iterator = query_job.result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3207, in result
+    super(QueryJob, self).result(retry=retry, timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 812, in result
+    return super(_AsyncJob, self).result(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 125, in result
+    self._blocking_poll(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3103, in _blocking_poll
+    super(QueryJob, self)._blocking_poll(timeout=timeout)
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 104, in _blocking_poll
+    retry_(self._done_or_raise)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/future/polling.py", line 83, in _done_or_raise
+    if not self.done():
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/job.py", line 3089, in done
+    timeout=transport_timeout,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 1362, in _get_query_results
+    retry, method="GET", path=path, query_params=extra_params, timeout=timeout
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/bigquery/client.py", line 578, in _call_api
+    return call()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 286, in retry_wrapped_func
+    on_error=on_error,
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/api_core/retry.py", line 184, in retry_target
+    return target()
+  File "/opt/anaconda3/lib/python3.7/site-packages/google/cloud/_http.py", line 423, in api_request
+    raise exceptions.from_http_response(response)
+google.api_core.exceptions.BadRequest: 400 GET https://bigquery.googleapis.com/bigquery/v2/projects/poetic-genius-315513/queries/ff21e00c-bd29-49c1-a960-941f0c76b0ee?maxResults=0&location=US: Unrecognized name: AuditCreatedDatetime at [5:31]
+
+(job ID: ff21e00c-bd29-49c1-a960-941f0c76b0ee)
+
+                                                                         -----Query Job SQL Follows-----                                                                         
+
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+   1:/* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.fct_fee"} */
+   2:
+   3:
+   4:  create or replace table `poetic-genius-315513`.`events_information`.`fct_fee`
+   5:  partition by datetime_trunc(AuditCreatedDatetime, day)
+   6:  
+   7:  OPTIONS()
+   8:  as (
+   9:    
+  10:
+  11:
+  12:
+  13:SELECT
+  14:  ProfessionalID,
+  15:  
+  16:  (CASE 
+  17:    WHEN ParsedMetadata[OFFSET(0)]='' 
+  18:      THEN 'Not provided' 
+  19:      ELSE  ParsedMetadata[OFFSET(0)]
+  20:    END
+  21:  ) AS ServiceID,
+  22:  
+  23:  EventID,
+  24:  EventType,
+  25:  CreatedAt,
+  26:  
+  27:  (CASE 
+  28:    WHEN ParsedMetadata[OFFSET(0)]!='' 
+  29:      THEN CAST(ParsedMetadata[OFFSET(3)] AS FLOAT64) 
+  30:      ELSE 0.0 
+  31:   END
+  32:  ) as LeadFee,
+  33: 
+  34:FROM
+  35:(
+  36:  SELECT
+  37:      EventID,
+  38:      EventType,
+  39:      ProfessionalID,
+  40:      CreatedAt,
+  41:      SPLIT(Metadata,'_') as ParsedMetadata,
+  42:      CURRENT_DATETIME() as AuditCreatedDatetime, -- Audit column
+  43:    FROM 
+  44:     `poetic-genius-315513.events_information.event_logs_stg`
+  45:     where Metadata!=''
+  46:)
+  47:
+  48:    -- this will only be applied on an incremental run & will filter data early
+  49:    -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+  50:    
+  51:  );
+  52:  
+    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |    .    |
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 156, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/base/impl.py", line 230, in execute
+    fetch=fetch
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 338, in execute
+    query_job, iterator = self.raw_execute(sql, fetch=fetch)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 329, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 539, in _retry_and_handle
+    on_error=reopen_conn_on_error)
+  File "/opt/anaconda3/lib/python3.7/contextlib.py", line 130, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 153, in exception_handler
+    self.handle_error(e, message)
+  File "/opt/anaconda3/lib/python3.7/site-packages/dbt/adapters/bigquery/connections.py", line 141, in handle_error
+    raise DatabaseException(error_msg)
+dbt.exceptions.DatabaseException: Database Error in model fct_fee (models/Facts/fct_fee.sql)
+  Unrecognized name: AuditCreatedDatetime at [5:31]
+  compiled SQL at target/run/werkspot_technical_challenge/models/Facts/fct_fee.sql
+2021-06-05 20:33:22.464990 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4de89aa8-dca8-4313-913f-7241d47f5286', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991d9bcf50>]}
+2021-06-05 20:33:22.465542 (Thread-1): 01:33:22 | 1 of 1 ERROR creating incremental model events_information.fct_fee... [ERROR in 3.69s]
+2021-06-05 20:33:22.465767 (Thread-1): Finished running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:33:22.484379 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:33:22.485059 (MainThread): 01:33:22 | 
+2021-06-05 20:33:22.485332 (MainThread): 01:33:22 | Finished running 1 incremental model in 7.11s.
+2021-06-05 20:33:22.485595 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:33:22.485811 (MainThread): Connection 'model.werkspot_technical_challenge.fct_fee' was properly closed.
+2021-06-05 20:33:22.497202 (MainThread): 
+2021-06-05 20:33:22.497470 (MainThread): Completed with 1 error and 0 warnings:
+2021-06-05 20:33:22.497767 (MainThread): 
+2021-06-05 20:33:22.497987 (MainThread): Database Error in model fct_fee (models/Facts/fct_fee.sql)
+2021-06-05 20:33:22.498205 (MainThread):   Unrecognized name: AuditCreatedDatetime at [5:31]
+2021-06-05 20:33:22.498394 (MainThread):   compiled SQL at target/run/werkspot_technical_challenge/models/Facts/fct_fee.sql
+2021-06-05 20:33:22.498575 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+2021-06-05 20:33:22.498907 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991d8a8610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991de12950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f991dc681d0>]}
+2021-06-05 20:33:22.499173 (MainThread): Flushing usage events
+2021-06-05 20:34:17.088015 (MainThread): Running with dbt=0.19.1
+2021-06-05 20:34:17.876868 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=['fct_fee'], partial_parse=None, profile=None, profiles_dir='/Users/mac/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-06-05 20:34:17.878388 (MainThread): Tracking: tracking
+2021-06-05 20:34:17.888610 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b01b2d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b01b550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b01b190>]}
+2021-06-05 20:34:17.902888 (MainThread): Partial parsing not enabled
+2021-06-05 20:34:17.904671 (MainThread): Parsing macros/etc.sql
+2021-06-05 20:34:17.909085 (MainThread): Parsing macros/catalog.sql
+2021-06-05 20:34:17.918376 (MainThread): Parsing macros/adapters.sql
+2021-06-05 20:34:17.947560 (MainThread): Parsing macros/materializations/seed.sql
+2021-06-05 20:34:17.951259 (MainThread): Parsing macros/materializations/view.sql
+2021-06-05 20:34:17.954949 (MainThread): Parsing macros/materializations/table.sql
+2021-06-05 20:34:17.968627 (MainThread): Parsing macros/materializations/copy.sql
+2021-06-05 20:34:17.974585 (MainThread): Parsing macros/materializations/incremental.sql
+2021-06-05 20:34:17.996764 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-06-05 20:34:18.000719 (MainThread): Parsing macros/core.sql
+2021-06-05 20:34:18.006336 (MainThread): Parsing macros/materializations/helpers.sql
+2021-06-05 20:34:18.018353 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-06-05 20:34:18.020721 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-06-05 20:34:18.044616 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-06-05 20:34:18.089262 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-06-05 20:34:18.117344 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-06-05 20:34:18.119833 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-06-05 20:34:18.128239 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-06-05 20:34:18.147057 (MainThread): Parsing macros/materializations/table/table.sql
+2021-06-05 20:34:18.156789 (MainThread): Parsing macros/materializations/view/view.sql
+2021-06-05 20:34:18.165248 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-06-05 20:34:18.172100 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-06-05 20:34:18.173420 (MainThread): Parsing macros/etc/query.sql
+2021-06-05 20:34:18.174843 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-06-05 20:34:18.177018 (MainThread): Parsing macros/etc/datetime.sql
+2021-06-05 20:34:18.188967 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-06-05 20:34:18.191570 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-06-05 20:34:18.194042 (MainThread): Parsing macros/adapters/common.sql
+2021-06-05 20:34:18.252168 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-06-05 20:34:18.254721 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-06-05 20:34:18.256755 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-06-05 20:34:18.259029 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-06-05 20:34:18.269982 (MainThread): Partial parsing not enabled
+2021-06-05 20:34:18.302624 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_service".
+2021-06-05 20:34:18.322341 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.dim_professional".
+2021-06-05 20:34:18.330276 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:34:18.337539 (MainThread): Acquiring new bigquery connection "model.werkspot_technical_challenge.event_logs_stg".
+2021-06-05 20:34:18.404000 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '25d62651-d779-4e0a-a147-a814bdf77dbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b2e2b90>]}
+2021-06-05 20:34:18.421654 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '25d62651-d779-4e0a-a147-a814bdf77dbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b4320d0>]}
+2021-06-05 20:34:18.422177 (MainThread): Found 4 models, 0 tests, 0 snapshots, 0 analyses, 156 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-06-05 20:34:18.423442 (MainThread): 
+2021-06-05 20:34:18.423905 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:34:18.425080 (ThreadPoolExecutor-0_0): Acquiring new bigquery connection "list_poetic-genius-315513".
+2021-06-05 20:34:18.425387 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-06-05 20:34:20.831555 (ThreadPoolExecutor-1_0): Acquiring new bigquery connection "list_poetic-genius-315513_events_information".
+2021-06-05 20:34:20.831915 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-06-05 20:34:20.832229 (ThreadPoolExecutor-1_0): Client.dataset is deprecated and will be removed in a future version. Use a string like 'my_project.my_dataset' or a cloud.google.bigquery.DatasetReference object, instead.
+2021-06-05 20:34:21.961854 (MainThread): 01:34:21 | Concurrency: 1 threads (target='dev')
+2021-06-05 20:34:21.962227 (MainThread): 01:34:21 | 
+2021-06-05 20:34:21.964520 (Thread-1): Began running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:34:21.964936 (Thread-1): 01:34:21 | 1 of 1 START incremental model events_information.fct_fee............ [RUN]
+2021-06-05 20:34:21.965412 (Thread-1): Acquiring new bigquery connection "model.werkspot_technical_challenge.fct_fee".
+2021-06-05 20:34:21.966752 (Thread-1): unclosed <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61510), raddr=('142.250.185.42', 443)>
+2021-06-05 20:34:21.967007 (Thread-1): unclosed <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61509), raddr=('172.217.169.234', 443)>
+2021-06-05 20:34:21.967208 (Thread-1): unclosed <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('192.168.0.104', 61511), raddr=('142.250.185.42', 443)>
+2021-06-05 20:34:21.967702 (Thread-1): Compiling model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:34:21.973586 (Thread-1): Writing injected SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:34:21.974119 (Thread-1): finished collecting timing info
+2021-06-05 20:34:22.045152 (Thread-1): Writing runtime SQL for node "model.werkspot_technical_challenge.fct_fee"
+2021-06-05 20:34:22.046040 (Thread-1): Opening a new connection, currently in state closed
+2021-06-05 20:34:22.046263 (Thread-1): On model.werkspot_technical_challenge.fct_fee: /* {"app": "dbt", "dbt_version": "0.19.1", "profile_name": "werkspot_technical_challenge", "target_name": "dev", "node_id": "model.werkspot_technical_challenge.fct_fee"} */
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`fct_fee`
+  partition by datetime_trunc(AuditCreatedDatetime, day)
+  
+  OPTIONS()
+  as (
+    
+
+
+
+SELECT
+  ProfessionalID,
+  
+  (CASE 
+    WHEN ParsedMetadata[OFFSET(0)]='' 
+      THEN 'Not provided' 
+      ELSE  ParsedMetadata[OFFSET(0)]
+    END
+  ) AS ServiceID,
+  
+  EventID,
+  EventType,
+  CreatedAt,
+  
+  (CASE 
+    WHEN ParsedMetadata[OFFSET(0)]!='' 
+      THEN CAST(ParsedMetadata[OFFSET(3)] AS FLOAT64) 
+      ELSE 0.0 
+   END
+  ) as LeadFee,
+
+  AuditCreatedDatetime
+ 
+FROM
+(
+  SELECT
+      EventID,
+      EventType,
+      ProfessionalID,
+      CreatedAt,
+      SPLIT(Metadata,'_') as ParsedMetadata,
+      CURRENT_DATETIME() as AuditCreatedDatetime, -- Audit column
+    FROM 
+     `poetic-genius-315513.events_information.event_logs_stg`
+     where Metadata!=''
+)
+
+    -- this will only be applied on an incremental run & will filter data early
+    -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+    
+  );
+  
+2021-06-05 20:34:26.067849 (Thread-1): finished collecting timing info
+2021-06-05 20:34:26.068437 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '25d62651-d779-4e0a-a147-a814bdf77dbb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b61b410>]}
+2021-06-05 20:34:26.068913 (Thread-1): 01:34:26 | 1 of 1 OK created incremental model events_information.fct_fee....... [CREATE TABLE (16.5k rows, 1.6 MB processed) in 4.10s]
+2021-06-05 20:34:26.069115 (Thread-1): Finished running node model.werkspot_technical_challenge.fct_fee
+2021-06-05 20:34:26.100021 (MainThread): Acquiring new bigquery connection "master".
+2021-06-05 20:34:26.100669 (MainThread): 01:34:26 | 
+2021-06-05 20:34:26.100931 (MainThread): 01:34:26 | Finished running 1 incremental model in 7.68s.
+2021-06-05 20:34:26.101185 (MainThread): Connection 'master' was properly closed.
+2021-06-05 20:34:26.101395 (MainThread): Connection 'model.werkspot_technical_challenge.fct_fee' was properly closed.
+2021-06-05 20:34:26.143902 (MainThread): 
+2021-06-05 20:34:26.144259 (MainThread): Completed successfully
+2021-06-05 20:34:26.144604 (MainThread): 
+Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+2021-06-05 20:34:26.145118 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b467a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b4e5b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f843b4e5910>]}
+2021-06-05 20:34:26.145417 (MainThread): Flushing usage events
