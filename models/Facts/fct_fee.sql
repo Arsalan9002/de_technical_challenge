@@ -45,7 +45,7 @@ FROM
       SPLIT(Metadata,'_') as ParsedMetadata,
       CURRENT_DATETIME() as AuditCreatedDatetime, -- Audit column
     FROM 
-     `poetic-genius-315513.events_information.event_logs_stg`
+     {{ref('event_logs_stg')}}
      where Metadata!=''
 )
 

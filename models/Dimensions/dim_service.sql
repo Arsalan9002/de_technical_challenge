@@ -28,7 +28,7 @@ FROM
     SPLIT(Metadata,'_') AS ParsedMetdata
   
   FROM 
-    `poetic-genius-315513.events_information.event_logs_stg`
+    {{ref('event_logs_stg')}}
      WHERE  Metadata!=''
 )
 
