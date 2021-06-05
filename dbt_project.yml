@@ -16,9 +16,3 @@ target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
     - "target"
     - "dbt_modules"
-
-models:
-  werkspot_technical_challenge:
-      # Applies to all files under models/example/
-      example:
-          materialized: view

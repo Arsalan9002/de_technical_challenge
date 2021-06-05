@@ -1,15 +1,11 @@
-{{ 
-  config(
-    materialized='incremental',
-    unique_key ='PK_ServiceID',
-    sort='PK_ServiceID',
-    partition_by={
-      "field": "AuditCreatedDateTime",
-      "data_type": "datetime",
-      "granularity": "day"
-    }
-  ) 
-}}
+
+
+  create or replace table `poetic-genius-315513`.`events_information`.`dim_service`
+  partition by datetime_trunc(AuditCreatedDateTime, day)
+  
+  OPTIONS()
+  as (
+    
 
 SELECT  -- ADDING one extra select so that results could be sorted based on PK_ServiceID
   *
@@ -37,13 +33,12 @@ FROM
        `poetic-genius-315513.events_information_staging.events_log_data_stg`
 
         -- this will only be applied on an incremental run & will filter data early
-        -- {{this}} will give last run date which can then be used to pick CDC records daily
-        {% if is_incremental() %}
-          where PARSE_DATETIME('%Y-%m-%d %H:%M:%S', AuditCreatedDatetime) > 
-            (select max(AuditCreatedDatetime) from {{ this }})
-        {% endif %}
+        -- `poetic-genius-315513`.`events_information`.`dim_service` will give last run date which can then be used to pick CDC records daily
+        
     )
     -- Discarding those rows where metadata is empty to reduce processing
     WHERE ParsedEventLog!=''
   )
 )
+  );
+  
