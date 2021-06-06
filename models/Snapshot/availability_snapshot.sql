@@ -63,7 +63,7 @@ FROM
         {{ref('event_logs_stg')}}
         
       GROUP BY 1,2,3 
-      HAVING CreatedAt BETWEEN CreatedAt AND '2020-03-10 23:59:59'
+      HAVING CreatedAt BETWEEN MIN(CreatedAt) AND '2020-03-10 23:59:59'
     )
   )
 ) 
