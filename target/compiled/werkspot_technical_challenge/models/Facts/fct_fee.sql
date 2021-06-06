@@ -34,11 +34,13 @@ FROM
       CreatedAt,
       SPLIT(Metadata,'_') as ParsedMetadata,
       CURRENT_DATETIME() as AuditCreatedDatetime, -- Audit column
-    FROM 
-     `poetic-genius-315513.events_information.event_logs_stg`
-     where Metadata!=''
-)
-
-    -- this will only be applied on an incremental run & will filter data early
-    -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
     
+    FROM 
+  
+      `poetic-genius-315513`.`events_information`.`event_logs_stg`
+     
+
+      -- this will only be applied on an incremental run & will filter data early
+      -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+      
+)
