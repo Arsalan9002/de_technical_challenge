@@ -20,6 +20,6 @@ FROM
     -- `poetic-genius-315513`.`events_information`.`event_logs_stg` will give last run date which can then be used to pick CDC records daily
     
       where Datetime(CAST(AuditCreatedDatetime as STRING)) > 
-        (select max(AuditCreatedDatetime) from `poetic-genius-315513`.`events_information`.`event_logs_stg`)
+        (select max(AuditCreatedDatetime) from `poetic-genius-315513.events_information.raw_event_logs`)
     
 )
