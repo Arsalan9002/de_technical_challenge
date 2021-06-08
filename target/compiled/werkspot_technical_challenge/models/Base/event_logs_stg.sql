@@ -19,7 +19,7 @@ FROM
     -- this will only be applied on an incremental run & will filter data early
     -- `poetic-genius-315513`.`events_information`.`event_logs_stg` will give last run date which can then be used to pick CDC records daily
     
-      where PARSE_DATETIME('%Y-%m-%d %H:%M:%S', AuditCreatedDatetime) > 
+      where Datetime(CAST(AuditCreatedDatetime as STRING)) > 
         (select max(AuditCreatedDatetime) from `poetic-genius-315513`.`events_information`.`event_logs_stg`)
     
 )
