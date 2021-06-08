@@ -46,6 +46,7 @@ FROM
       CURRENT_DATETIME() as AuditCreatedDatetime, -- Audit column
     
     FROM 
+    
   
       {{ref('event_logs_stg')}}
      
