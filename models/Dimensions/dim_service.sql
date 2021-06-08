@@ -25,7 +25,8 @@ FROM
 (
   SELECT 
     
-    SPLIT(Metadata,'_') AS ParsedMetdata
+    SPLIT(Metadata,'_') AS ParsedMetdata,
+    AuditCreatedDatetime
   
   FROM 
     {{ref('event_logs_stg')}}
@@ -35,8 +36,7 @@ FROM
   -- this will only be applied on an incremental run & will filter data early
   -- {{this}} will give last run date which can then be used to pick CDC records daily
   {% if is_incremental() %}
-    where PARSE_DATETIME('%Y-%m-%d %H:%M:%S', AuditCreatedDatetime) > 
-      (select max(AuditCreatedDatetime) from {{ this }})
+    where AuditCreatedDatetime > (select max(AuditCreatedDatetime) from {{ this }})
   {% endif %}
 
 

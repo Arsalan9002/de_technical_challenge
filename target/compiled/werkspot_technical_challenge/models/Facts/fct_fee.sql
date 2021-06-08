@@ -1,4 +1,14 @@
-
+{{ 
+  config(
+    materialized='incremental',
+    sort=['ProfessionalID','ServiceID','EventID'], 
+    partition_by={
+      "field": "AuditCreatedDateTime",
+      "data_type": "datetime",
+      "granularity": "day"
+    }
+  ) 
+}}
 
 
 
@@ -37,10 +47,13 @@ FROM
     
     FROM 
   
-      `poetic-genius-315513`.`events_information`.`event_logs_stg`
+      {{ref('event_logs_stg')}}
      
-
       -- this will only be applied on an incremental run & will filter data early
-      -- `poetic-genius-315513`.`events_information`.`fct_fee` will give last run date which can then be used to pick CDC records daily
+      -- {{this}} will give last run date which can then be used to pick CDC records daily
+      {% if is_incremental() %}
+        where AuditCreatedDatetime > (select max(AuditCreatedDatetime) from {{ this }})
+      {% endif %}
+      
       
 )
