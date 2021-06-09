@@ -29,6 +29,6 @@ FROM
     -- {{this}} will give last run date which can then be used to pick CDC records daily
     {% if is_incremental() %}
     	where PARSE_DATETIME('%Y-%m-%d %H:%M:%S',AuditCreatedDatetime) >
-        (select MAX(PARSE_DATETIME('%Y-%m-%d %H:%M:%S',AuditCreatedDatetime)) from {{ this }})
+        (select MAX(AuditCreatedDatetime) from {{ this }})
     {% endif %}
 )
